@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Layout example</title>
+<link href='http://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet' type='text/css'>
+<!-- 초기화 -->
+<style>
+	* {margin: 0; padding: 0;}
+	body {
+		font-family: 'Times New Roman', serif;
+	}
+	li { list-style: none;}
+	a { text-decoration: none;}
+	img { border: 0;}	
+</style>
+<style>
+	.body > p {
+		margin-top: 20px;
+	}
+	#title {
+		font-family: 'Gabriela', cursive;
+	}
+	#main_header {
+		width: 960px;	height: 160px;
+		margin: 0 auto;
+		position: relative;
+	}
+	#main_header > #title {
+		position: absolute;
+		left: 20px; top: 30px;
+	}
+	#main_header > #main_gnb {
+		position: absolute;
+		right:20px; top:5px;
+	}
+	#main_header > #main_lnb {
+		position: absolute;
+		right:20px; bottom:10px;
+	}
+	#main_gnb > ul { overflow: hidden;}
+	#main_gnb > ul > li {float: left;}
+	#main_gnb > ul > li > a {
+		display: block;
+		padding: 2px 10px;
+		border: 1px solid black;
+	}
+	#main_gnb > ul > li > a:hover{
+		background: black;
+		color: white;
+	}
+	#main_gnb > ul > li:first-child > a {
+		border-radius: 10px 0 0 10px;
+	}
+	#main_gnb > ul > li:last-child > a {
+		border-radius: 0 10px 10px 0;
+	}
+	#main_lnb > ul { overflow: hidden;}
+	#main_lnb > ul > li {float: left;}
+	#main_lnb > ul > li > a {
+		display: block;
+		padding: 10px 20px;
+		border: 1px solid black;
+	}
+	#main_lnb > ul > li > a:hover{
+		background: black;
+		color: white;
+	}
+	#main_lnb > ul > li:first-child > a {
+		border-radius: 10px 0 0 10px;
+	}
+	#main_lnb > ul > li:last-child > a {
+		border-radius: 0 10px 10px 0;
+	}
+	#content {
+		width: 960px; margin: 0 auto;
+		margin-bottom: 10px;
+		overflow: hidden;
+	}
+	#content > #main_section {
+		width: 750px;
+		float:left;
+	}
+	#content > #main_aside {
+		width: 200px;
+		float: right;
+	}
+	img {
+  		float: left;
+  	}
+  	.title {
+  		width: 100%;	height: 210px;
+  		margin: 0;
+  		line-height: 210px;
+  		text-align: center;
+  		font-family: monospace;
+  		font-size: 3.0em; 
+  	}
+  	.sub_title{
+  		text-shadow: 5px 5px 10px black;
+  		color : #5C8EFA;
+  		margin-top: 20px;
+  		margin-bottom: 10px;
+  		font-size : 1.8em;
+  	}
+  	.part1{ overflow : hidden;}
+  	.ajfal {background-color : #96FA0A;}
+  	.zjarn {background-color : #F0FB23;}
+  	.xmrgj {background-color : #C8FEFE;}
+  	.db {background-color : #FEC3EB;}
+  	.tlth {background-color : #D2CDFE;}
+  	.dkfrhflwma {background-color : #F1B9FE;}
+  	.smash {background-color : #D3D2FE;}
+  	.dnsdudcpwpfhs {background-color : #FDFEDC;}
+  	table {text-align : center;
+  			border-collapse : collapse;
+  			width : 750px;}
+  	#description > p::first-letter {font-size: 1.5em;}
+	section.buttons {
+		display: block; float: left;
+		width: 200px; height: 30px;
+		line-height: 30px;
+		text-align: center;
+		box-sizing: border-box;
+		border: 1px solid black;
+		background: black;
+		color: white;
+	}
+	.item {
+		overflow: hidden;
+		padding: 10px;
+		border: 1px solid black;
+		border-top: none;
+	}
+	.thumbnail { float: left;}
+	.description { float: left; margin-left:10px;}
+	.description > strong {
+		display: block;
+		width: 120px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	#resume{
+		margin-top: 20px;
+	}
+	#main_footer {
+		width: 960px; margin: 0 auto;
+		margin-bottom: 10px;
+		box-sizing: border-box;
+		padding: 10px;
+		border: 1px solid black;
+		text-align : center;
+	}
+		.image {
+			display: inline-block;
+			float: left;
+			width: 200px;
+		}
+		input[type="file"] {
+			width: 200px;
+		}
+		input[type="number"] {
+			width: 40px;
+		}
+		
+		input:focus,textarea:focus {
+			background-color: rgb(205, 255, 161);
+		}
+		
+		th {
+			background-color: rgb(243, 255, 163);
+		}
+</style>
+</head>
+<body>
+	<header id="main_header">
+		<hgroup id="title">
+			<h1>Layout Example</h1>
+			<h2>made by HakCheon</h2>
+		</hgroup>
+		<nav id="main_gnb">
+			<ul>
+				<li><a href="#">sign up</a></li>
+				<li><a href="#">log in</a></li>
+			</ul>
+		</nav>
+		<nav id="main_lnb">
+			<ul>
+				<li><a href="#">Introduction</a></li>
+				<li><a href="#">Resume</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="content">
+		<section id="main_section">
+			<div class="part1">
+				<img src="http://dbscthumb.phinf.naver.net/0727_000_1305/20140208033235418_ECVLNSXAE.jpg/F282E19AF1350500.jpg?type=appG1" align="left">
+				<p><br>이름 : 김학천<br> <br>생년월일 : 1991년 6월 14일</p>
+			</div>
+
+			<div id="description">
+				<h2 class="sub_title">인생 좌우명</h2>
+				<p>후회하지 말자</p>
+				<h2 class="sub_title">지금까지 살아온 길</h2>
+				<p>1991년 6월 14일 서울에서 태어나 일산에서 살다 초등학교 2학년이 되던 해 의정부로 이사를 와 현재까지 의정부에 살고 있다.<br>
+				의정부에서 민락초등학교, 충의중학교, 의정부고등학교를 졸업하였으며 현재는 한양대학교 ERICA캠퍼스 컴퓨터공학과에 재학중이다.</p>
+				<h2 class="sub_title">졸업 후 나의 모습</h2>
+				<p>자동차회사의 연구직으로 입사하여 자율주행 자동차에 대한 연구를 하고 있을 것이다.</p>
+			</div>
+	
+			<h2 class="sub_title">이번 학기 시간표</h2>
+			<table border="1" >
+				<tbody>
+					<tr>
+						<th></th>
+						<th>월요일</th>
+						<th>화요일</th>
+						<th>수요일</th>
+						<th>목요일</th>
+						<th>금요일</th>
+					</tr>
+					<tr>
+						<td>9:00~9:30</td>
+						<td></td>
+						<td rowspan="3" class="dkfrhflwma">알고리즘<br>설계와분석</td>
+						<td></td>
+						<td></td>
+						<td rowspan="3" class="dkfrhflwma">알고리즘<br>설계와분석</td>
+					</tr>
+					<tr>
+						<td>9:30~10:00</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>10:00~10:30</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>10:30~11:00</td>
+						<td></td>
+						<td rowspan="3" class="tlth">시스템<br>소프트웨어</td>
+						<td rowspan="3" class="zjarn">컴퓨터구조</td>
+						<td rowspan="3" class="dnsdudcpwpfhs">운영체제론</td>
+						<td rowspan="3" class="tlth">시스템<br>소프트웨어</td>
+					</tr>
+					<tr>
+						<td>11:00~11:30</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>11:30~12:00</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>12:00~12:30</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>12:30~13:00</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>13:00~13:30</td>
+						<td rowspan="3" class="ajfal">멀티미디어<br>정보처리</td>
+						<td rowspan="3" class="zjarn">컴퓨터구조</td>
+						<td></td>
+						<td></td>
+						<td rowspan="3" class="db">데이터베이스</td>
+					</tr>
+					<tr>
+						<td>13:30~14:00</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>14:00~14:30</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>14:30~15:00</td>
+						<td rowspan="3" class="dnsdudcpwpfhs">운영체제론</td>
+						<td rowspan="3" class="db">데이터베이스</td>
+						<td></td>
+						<td rowspan="3" class="ajfal">멀티미디어<br>정보처리</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>15:00~15:30</td>
+						<td rowspan="4" class="xmrgj">특허와협상1</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>15:30~16:00</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>16:00~16:30</td>
+						<td rowspan="4" class="db">데이터베이스</td>
+						<td></td>
+						<td rowspan="4" class="smash">SMaSH<br>프로젝트1</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>16:30~17:00</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>17:00~17:30</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>17:30~18:00</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		<form id="resume">
+		<table class="image">
+			<tr><td><img src="http://placehold.it/180x240"></td></tr>
+			<tr><td><input	type="file" value="file"></td></tr>
+		</table>
+		<div class="body">
+			<p>
+				<label for="name">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름
+					:</label> <input id="name" type="text">
+			</p>
+			<p>
+				성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;별 : <input id="man"
+					type="radio" name="gender" value="m"> <label for="man">남자</label>
+				<input id="woman" type="radio" name="gender" value="w"> <label
+					for="woman">여자</label>
+			</p>
+			<p>
+				<label for="birth">생년월일 :</label> <input id="birth"
+					type="date">
+			</p>
+			<p>
+				<label for="age">나&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이 :</label> <input
+					id="age" type="number" min="0" max="120">
+			</p>
+			<p>
+				<label for="phone">전화번호 :</label> <input id="phone" type="tel">
+			</p>
+			<p>
+				<label for="mail">이 메 일&nbsp; :</label> <input id="mail"
+					type="email">
+			</p>
+		</div>
+		<table border="1">
+			<tbody>
+				<tr>
+					<th colspan="2" align="center">어 학 능 력</th>
+				</tr>
+				<tr>
+					<td align="center">영어</td>
+					<td align="center"><input id="eng_high" type="radio"
+						name="english" value="high"> <label for="eng_high">상&nbsp;&nbsp;</label>
+						<input id="eng_middle" type="radio" name="english" value="middle">
+						<label for="eng_middle">중&nbsp;&nbsp;</label> <input
+						id="eng_low" type="radio" name="english" value="low"> <label
+						for="eng_low">하</label></td>
+				</tr>
+				<tr>
+					<td align="center">중국어</td>
+					<td align="center"><input id="chinese_high" type="radio"
+						name="chinese" value="high"> <label for="chinese_high">상&nbsp;&nbsp;</label>
+						<input id="chinese_middle" type="radio" name="chinese"
+						value="middle"> <label for="chinese_middle">중&nbsp;&nbsp;</label>
+						<input id="chinese_low" type="radio" name="chinese" value="low">
+						<label for="chinese_low">하</label></td>
+				</tr>
+				<tr>
+					<td align="center"><input type="text"
+						placeholder="기타 언어를 입력하세요"></td>
+					<td align="center"><input id="else_high" type="radio"
+						name="else" value="high"> <label for="else_high">상&nbsp;&nbsp;</label>
+						<input id="else_middle" type="radio" name="else" value="middle">
+						<label for="else_middle">중&nbsp;&nbsp;</label> <input
+						id="else_low" type="radio" name="else" value="low"> <label
+						for="else_low">하</label></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<table border="1">
+			<tbody>
+				<tr>
+					<th colspan="3" align="center">과 거 경 력</th>
+				</tr>
+				<tr>
+					<td align="center">기 관 명</td>
+					<td align="center">근 무 기 간</td>
+					<td align="center">비 고</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="text" size="15"></td>
+					<td align="center"><input type="number" min="1">개월</td>
+					<td align="center"><input type="text" size="45"></td>
+				</tr>
+				<tr>
+					<td align="center"><input type="text" size="15"></td>
+					<td align="center"><input type="number" min="1">개월</td>
+					<td align="center"><input type="text" size="45"></td>
+				</tr>
+				<tr>
+					<td align="center"><input type="text" size="15"></td>
+					<td align="center"><input type="number" min="1">개월</td>
+					<td align="center"><input type="text" size="45"></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<table border="1">
+			<tbody>
+				<tr>
+					<th align="center"><label for="reason">&nbsp;&nbsp;&nbsp;자
+							기 소 개</label></th>
+				</tr>
+				<tr>
+					<td align="center"><textarea id="reason" cols="100" rows="10" placeholder="자기소개를 입력하세요."></textarea></td>
+				</tr>
+			</tbody>
+		</table>
+		&nbsp;
+		<table border="1">
+			<tbody>
+				<tr>
+					<th align="center"><label for="reason">&nbsp;&nbsp;&nbsp;지
+							원 동 기</label></th>
+				</tr>
+				<tr>
+					<td align="center"><textarea id="reason" cols="100" rows="10"
+							width="550" placeholder="지원동기를 입력하세요."></textarea></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+		</section>
+		<aside id="main_aside">
+			<section class="buttons">
+				Favorite
+			</section>
+			<div class="tab_item">
+				<ul>
+					<li class="item">
+						<a href="http://www.naver.com">
+							<div class="thumbnail">
+								<img src="http://placehold.it/45x45"/>
+							</div>
+							<div class="description">
+								<strong>Naver</strong>
+								<p>2013-02-15</p>
+							</div>
+						</a>
+					</li>
+					<li class="item">
+						<a href="http://www.hanyang.ac.kr">
+							<div class="thumbnail">
+								<img src="http://placehold.it/45x45"/>
+							</div>
+							<div class="description">
+								<strong>한양대학교</strong>
+								<p>2013-02-15</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</aside>
+	</div>
+	<footer id="main_footer">
+		<h3>Cheon's example page</h3>
+		<address>made by HakCheon</address>
+	</footer>
+</body>
+</html>

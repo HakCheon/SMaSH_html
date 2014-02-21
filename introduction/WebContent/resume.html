@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>이력서</title>
+	<style type="text/css">
+		body {
+			background-image: url('./image/IU.jpg');
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			width: 760px;
+			margin: auto;
+		}
+		img {
+			margin: 0;
+		}
+		table {
+			width: 760px;
+		}
+		div{
+			display: inline-block;
+		}
+		.image {
+			display: inline-block;
+			float: left;
+			width: 200px;
+		}
+		input[type="file"] {
+			width: 200px;
+		}
+		input[type="number"] {
+			width: 40px;
+		}
+		
+		input:focus,textarea:focus {
+			background-color: rgb(205, 255, 161);
+		}
+		
+		#submit {
+			position: relative;
+			left: 47%;
+		}
+		
+		th {
+			background-color: rgb(243, 255, 163);
+		}
+	</style>
+</head>
+
+<body>
+	<form action="">
+		<table class="image">
+			<tr><td><img src="http://placehold.it/180x240"></td></tr>
+			<tr><td><input	type="file" value="file"></td></tr>
+		</table>
+		<div class="body">
+			<p>
+				<label for="name">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름
+					:</label> <input id="name" type="text">
+			</p>
+			<p>
+				성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;별 : <input id="man"
+					type="radio" name="gender" value="m"> <label for="man">남자</label>
+				<input id="woman" type="radio" name="gender" value="w"> <label
+					for="woman">여자</label>
+			</p>
+			<p>
+				<label for="birth">생년월일 :</label> <input id="birth"
+					type="date">
+			</p>
+			<p>
+				<label for="age">나&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이 :</label> <input
+					id="age" type="number" min="0" max="120">
+			</p>
+			<p>
+				<label for="phone">전화번호 :</label> <input id="phone" type="tel">
+			</p>
+			<p>
+				<label for="mail">이 메 일&nbsp; :</label> <input id="mail"
+					type="email">
+			</p>
+		</div>
+		<table border="1">
+			<tbody>
+				<tr>
+					<th colspan="2" align="center">어 학 능 력</th>
+				</tr>
+				<tr>
+					<td align="center">영어</td>
+					<td align="center"><input id="eng_high" type="radio"
+						name="english" value="high"> <label for="eng_high">상&nbsp;&nbsp;</label>
+						<input id="eng_middle" type="radio" name="english" value="middle">
+						<label for="eng_middle">중&nbsp;&nbsp;</label> <input
+						id="eng_low" type="radio" name="english" value="low"> <label
+						for="eng_low">하</label></td>
+				</tr>
+				<tr>
+					<td align="center">중국어</td>
+					<td align="center"><input id="chinese_high" type="radio"
+						name="chinese" value="high"> <label for="chinese_high">상&nbsp;&nbsp;</label>
+						<input id="chinese_middle" type="radio" name="chinese"
+						value="middle"> <label for="chinese_middle">중&nbsp;&nbsp;</label>
+						<input id="chinese_low" type="radio" name="chinese" value="low">
+						<label for="chinese_low">하</label></td>
+				</tr>
+				<tr>
+					<td align="center"><input type="text"
+						placeholder="기타 언어를 입력하세요"></td>
+					<td align="center"><input id="else_high" type="radio"
+						name="else" value="high"> <label for="else_high">상&nbsp;&nbsp;</label>
+						<input id="else_middle" type="radio" name="else" value="middle">
+						<label for="else_middle">중&nbsp;&nbsp;</label> <input
+						id="else_low" type="radio" name="else" value="low"> <label
+						for="else_low">하</label></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<table border="1">
+			<tbody>
+				<tr>
+					<th colspan="3" align="center">과 거 경 력</th>
+				</tr>
+				<tr>
+					<td align="center">기 관 명</td>
+					<td align="center">근 무 기 간</td>
+					<td align="center">비 고</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="text" size="15"></td>
+					<td align="center"><input type="number" min="1">개월</td>
+					<td align="center"><input type="text" size="45"></td>
+				</tr>
+				<tr>
+					<td align="center"><input type="text" size="15"></td>
+					<td align="center"><input type="number" min="1">개월</td>
+					<td align="center"><input type="text" size="45"></td>
+				</tr>
+				<tr>
+					<td align="center"><input type="text" size="15"></td>
+					<td align="center"><input type="number" min="1">개월</td>
+					<td align="center"><input type="text" size="45"></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<table border="1">
+			<tbody>
+				<tr>
+					<th align="center"><label for="reason">&nbsp;&nbsp;&nbsp;자
+							기 소 개</label></th>
+				</tr>
+				<tr>
+					<td align="center"><textarea id="reason" cols="100" rows="10" placeholder="자기소개를 입력하세요."></textarea></td>
+				</tr>
+			</tbody>
+		</table>
+		&nbsp;
+		<table border="1">
+			<tbody>
+				<tr>
+					<th align="center"><label for="reason">&nbsp;&nbsp;&nbsp;지
+							원 동 기</label></th>
+				</tr>
+				<tr>
+					<td align="center"><textarea id="reason" cols="100" rows="10"
+							width="550" placeholder="지원동기를 입력하세요."></textarea></td>
+				</tr>
+			</tbody>
+		</table>
+		&nbsp;
+		<div id="submit">
+			<input type="button" value="    제   출    ">
+		</div>
+	</form>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<audio controls="controls" src="./music/Frozen.mp3" type="audio/mp3"></audio>
+	<audio controls="controls" src="./music/LOL.mp3" type="audio/mp3"></audio>
+	<br>
+	<video controls="conotrols" src="./video/RFamily.mp4" type="video/mp4"></video>
+	<video controls="conotrols" src="./video/INeedAGril.mp4"
+		type="video/mp4"></video>
+</body>
+
+</html>
